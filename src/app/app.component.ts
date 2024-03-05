@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddEditEmpComponent } from './add-edit-emp/add-edit-emp.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CRUD';
+  constructor(private dialog:MatDialog){}
+  openAddEditEmp(){
+    this.dialog.open(AddEditEmpComponent);
+  }
 }
